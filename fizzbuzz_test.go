@@ -5,12 +5,12 @@ import (
 )
 
 func TestPrintFizzBuzz(t *testing.T) {
-	resultString := PrintFizzBuzz()
-
-	expectedString := "test"
+	resultString := PrintFizzBuzz(15)
+	expectedString := "FizzBuzz:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n"
 
 	if resultString != expectedString {
-		t.Log("FizzBuzz failed")
+		t.Log("FizzBuzz failed", resultString, expectedString)
+		t.Fail()
 	}
 }
 

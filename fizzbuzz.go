@@ -1,7 +1,28 @@
 package fizzbuzz
 
-func PrintFizzBuzz() string {
-	return "test"
+import (
+	"fmt"
+)
+
+func PrintFizzBuzz(times int) string {
+	results := "FizzBuzz:\n"
+
+	for fizzBuzzCount := 1; fizzBuzzCount <= times; fizzBuzzCount++ {
+		result := ""
+		if fizzBuzzCount%3 == 0 {
+			result += "Fizz"
+		}
+		if fizzBuzzCount%5 == 0 {
+			result += "Buzz"
+		}
+		if result != "" {
+			results += (result + "\n")
+			continue
+		}
+		results += fmt.Sprintf("%d\n", fizzBuzzCount)
+	}
+
+	return results
 }
 
 func Fizzbuzz(number int) (string, int) {
