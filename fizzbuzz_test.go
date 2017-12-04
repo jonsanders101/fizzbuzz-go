@@ -9,7 +9,6 @@ func TestPrintFizzBuzz(t *testing.T) {
 	expectedString := "FizzBuzz:\n1\n2\nFizz\n4\nBuzz\nFizz\n7\n8\nFizz\nBuzz\n11\nFizz\n13\n14\nFizzBuzz\n"
 
 	if resultString != expectedString {
-		t.Log("FizzBuzz failed", resultString, expectedString)
-		t.Fail()
+		t.Error("Expecting:", resultString, "got:", expectedString)
 	}
 }
