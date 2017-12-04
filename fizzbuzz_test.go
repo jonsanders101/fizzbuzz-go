@@ -4,6 +4,16 @@ import (
 	"testing"
 )
 
+func TestPrintFizzBuzz(t *testing.T) {
+	resultString := PrintFizzBuzz()
+
+	expectedString := "test"
+
+	if resultString != expectedString {
+		t.Log("FizzBuzz failed")
+	}
+}
+
 func TestReturnsFizzFor3(t *testing.T) {
 	resultString, resultNum := Fizzbuzz(3)
 

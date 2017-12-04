@@ -1,5 +1,9 @@
 package fizzbuzz
 
+func PrintFizzBuzz() string {
+	return "test"
+}
+
 func Fizzbuzz(number int) (string, int) {
 	if number%15 == 0 {
 		return "FizzBuzz", number
